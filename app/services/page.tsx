@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 import {
   Check,
   Shield,
@@ -12,13 +12,13 @@ import {
   Users,
   Megaphone,
   Handshake,
-} from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { PageCTA } from "@/components/page-cta"
-import { RelatedPages } from "@/components/related-pages"
+} from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { PageCTA } from "@/components/page-cta";
+import { RelatedPages } from "@/components/related-pages";
 
 export default function ServicesPage() {
   return (
@@ -31,10 +31,15 @@ export default function ServicesPage() {
           <div className="absolute inset-0 bg-grid-slate-200/50 [mask-image:linear-gradient(0deg,white,transparent)] dark:bg-grid-slate-700/25"></div>
           <div className="container relative z-10">
             <div className="text-center py-20">
-              <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20 border-none">Our Services</Badge>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Reputation. Visibility. Growth.</h1>
+              <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20 border-none">
+                Our Services
+              </Badge>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Reputation. Visibility. Growth.
+              </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Everything you need to build trust, stand out, and win clients — in one platform.
+                Everything you need to build trust, stand out, and win clients —
+                in one platform.
               </p>
             </div>
           </div>
@@ -50,23 +55,17 @@ export default function ServicesPage() {
                   <Shield className="h-4 w-4" />
                   Business Profile & Verification
                 </div>
-                <h2 className="text-3xl font-bold mb-4">Establish your credibility in the financial ecosystem.</h2>
+                <h2 className="text-3xl font-bold mb-4">
+                  Establish your credibility in the financial ecosystem.
+                </h2>
                 <ul className="space-y-4 mb-6">
                   <li className="flex items-start gap-3">
                     <div className="bg-primary/10 p-2 rounded-full mt-1">
                       <Check className="h-4 w-4 text-primary" />
                     </div>
                     <div>
-                      <p className="font-medium">Claim & customize your company profile</p>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="bg-primary/10 p-2 rounded-full mt-1">
-                      <Check className="h-4 w-4 text-primary" />
-                    </div>
-                    <div>
                       <p className="font-medium">
-                        Upload licenses for <span className="font-bold">regulatory verification</span>
+                        Claim & customize your company profile
                       </p>
                     </div>
                   </li>
@@ -76,8 +75,10 @@ export default function ServicesPage() {
                     </div>
                     <div>
                       <p className="font-medium">
-                        Earn <span className="font-bold">Verified Business Badge</span> to display on TrustFinance and
-                        your site
+                        Upload licenses for{" "}
+                        <span className="font-bold">
+                          regulatory verification
+                        </span>
                       </p>
                     </div>
                   </li>
@@ -86,7 +87,23 @@ export default function ServicesPage() {
                       <Check className="h-4 w-4 text-primary" />
                     </div>
                     <div>
-                      <p className="font-medium">Multi-language support for global visibility</p>
+                      <p className="font-medium">
+                        Earn{" "}
+                        <span className="font-bold">
+                          Verified Business Badge
+                        </span>{" "}
+                        to display on TrustFinance and your site
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="bg-primary/10 p-2 rounded-full mt-1">
+                      <Check className="h-4 w-4 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-medium">
+                        Multi-language support for global visibility
+                      </p>
                     </div>
                   </li>
                 </ul>
@@ -104,7 +121,7 @@ export default function ServicesPage() {
               </div>
               <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
                 <Image
-                  src="/business-profile-verification.png"
+                  src="/images/Service/01.png"
                   alt="Business Profile & Verification"
                   fill
                   className="object-cover"
@@ -119,7 +136,9 @@ export default function ServicesPage() {
                   <Star className="h-4 w-4" />
                   TrustScore & Trust Widgets
                 </div>
-                <h2 className="text-3xl font-bold mb-4">Your trust, visualized and measurable.</h2>
+                <h2 className="text-3xl font-bold mb-4">
+                  Your trust, visualized and measurable.
+                </h2>
                 <ul className="space-y-4 mb-6">
                   <li className="flex items-start gap-3">
                     <div className="bg-primary/10 p-2 rounded-full mt-1">
@@ -127,7 +146,9 @@ export default function ServicesPage() {
                     </div>
                     <div>
                       <p className="font-medium">
-                        Proprietary <span className="font-bold">TrustScore</span> algorithm for finance
+                        Proprietary{" "}
+                        <span className="font-bold">TrustScore</span> algorithm
+                        for finance
                       </p>
                     </div>
                   </li>
@@ -137,7 +158,8 @@ export default function ServicesPage() {
                     </div>
                     <div>
                       <p className="font-medium">
-                        Display star ratings + social proof via <span className="font-bold">embeddable widgets</span>
+                        Display star ratings + social proof via{" "}
+                        <span className="font-bold">embeddable widgets</span>
                       </p>
                     </div>
                   </li>
@@ -146,7 +168,9 @@ export default function ServicesPage() {
                       <Check className="h-4 w-4 text-primary" />
                     </div>
                     <div>
-                      <p className="font-medium">Use widgets in emails, websites, and sales decks</p>
+                      <p className="font-medium">
+                        Use widgets in emails, websites, and sales decks
+                      </p>
                     </div>
                   </li>
                 </ul>
@@ -163,7 +187,12 @@ export default function ServicesPage() {
                 </div>
               </div>
               <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl md:order-1">
-                <Image src="/trustscore-widgets.png" alt="TrustScore & Trust Widgets" fill className="object-cover" />
+                <Image
+                  src="/images/Service/02.png"
+                  alt="TrustScore & Trust Widgets"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
 
@@ -174,7 +203,9 @@ export default function ServicesPage() {
                   <MessageSquare className="h-4 w-4" />
                   Review Collection & Management
                 </div>
-                <h2 className="text-3xl font-bold mb-4">Control the narrative with verified, real feedback.</h2>
+                <h2 className="text-3xl font-bold mb-4">
+                  Control the narrative with verified, real feedback.
+                </h2>
                 <ul className="space-y-4 mb-6">
                   <li className="flex items-start gap-3">
                     <div className="bg-primary/10 p-2 rounded-full mt-1">
@@ -182,16 +213,9 @@ export default function ServicesPage() {
                     </div>
                     <div>
                       <p className="font-medium">
-                        Multiple review channels: direct link, invite email, QR code, embedded widget
+                        Multiple review channels: direct link, invite email, QR
+                        code, embedded widget
                       </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="bg-primary/10 p-2 rounded-full mt-1">
-                      <Check className="h-4 w-4 text-primary" />
-                    </div>
-                    <div>
-                      <p className="font-medium">Admin dashboard to reply, moderate, and highlight reviews</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -200,7 +224,8 @@ export default function ServicesPage() {
                     </div>
                     <div>
                       <p className="font-medium">
-                        Auto-detection of <span className="font-bold">fake or spam reviews</span>
+                        Admin dashboard to reply, moderate, and highlight
+                        reviews
                       </p>
                     </div>
                   </li>
@@ -209,7 +234,20 @@ export default function ServicesPage() {
                       <Check className="h-4 w-4 text-primary" />
                     </div>
                     <div>
-                      <p className="font-medium">Social sharing of positive reviews with visual templates</p>
+                      <p className="font-medium">
+                        Auto-detection of{" "}
+                        <span className="font-bold">fake or spam reviews</span>
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="bg-primary/10 p-2 rounded-full mt-1">
+                      <Check className="h-4 w-4 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-medium">
+                        Social sharing of positive reviews with visual templates
+                      </p>
                     </div>
                   </li>
                 </ul>
@@ -221,13 +259,14 @@ export default function ServicesPage() {
                     🛡️ Fake review detection + manual moderation
                   </Badge>
                   <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-100 hover:bg-purple-200 dark:hover:bg-purple-800">
-                    📣 Easily share positive reviews to Facebook, LinkedIn, YouTube
+                    📣 Easily share positive reviews to Facebook, LinkedIn,
+                    YouTube
                   </Badge>
                 </div>
               </div>
               <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
                 <Image
-                  src="/review-management.png"
+                  src="/images/Service/03.png"
                   alt="Review Collection & Management"
                   fill
                   className="object-cover"
@@ -242,7 +281,9 @@ export default function ServicesPage() {
                   <LineChart className="h-4 w-4" />
                   Analytics & Insights
                 </div>
-                <h2 className="text-3xl font-bold mb-4">Turn feedback into business intelligence.</h2>
+                <h2 className="text-3xl font-bold mb-4">
+                  Turn feedback into business intelligence.
+                </h2>
                 <ul className="space-y-4 mb-6">
                   <li className="flex items-start gap-3">
                     <div className="bg-primary/10 p-2 rounded-full mt-1">
@@ -250,7 +291,8 @@ export default function ServicesPage() {
                     </div>
                     <div>
                       <p className="font-medium">
-                        Dashboard: see sentiment trends, source tracking, and TrustScore evolution
+                        Dashboard: see sentiment trends, source tracking, and
+                        TrustScore evolution
                       </p>
                     </div>
                   </li>
@@ -260,7 +302,8 @@ export default function ServicesPage() {
                     </div>
                     <div>
                       <p className="font-medium">
-                        Conversion analysis from <span className="font-bold">review invitations</span>
+                        Conversion analysis from{" "}
+                        <span className="font-bold">review invitations</span>
                       </p>
                     </div>
                   </li>
@@ -269,7 +312,10 @@ export default function ServicesPage() {
                       <Check className="h-4 w-4 text-primary" />
                     </div>
                     <div>
-                      <p className="font-medium">Benchmarking against competitors in your financial category</p>
+                      <p className="font-medium">
+                        Benchmarking against competitors in your financial
+                        category
+                      </p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -277,7 +323,10 @@ export default function ServicesPage() {
                       <Check className="h-4 w-4 text-primary" />
                     </div>
                     <div>
-                      <p className="font-medium">Widget engagement, visitor location, and traffic source insights</p>
+                      <p className="font-medium">
+                        Widget engagement, visitor location, and traffic source
+                        insights
+                      </p>
                     </div>
                   </li>
                 </ul>
@@ -294,7 +343,12 @@ export default function ServicesPage() {
                 </div>
               </div>
               <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl md:order-1">
-                <Image src="/analytics-insights.png" alt="Analytics & Insights" fill className="object-cover" />
+                <Image
+                  src="/images/Service/04.png"
+                  alt="Analytics & Insights"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
 
@@ -305,7 +359,9 @@ export default function ServicesPage() {
                   <Megaphone className="h-4 w-4" />
                   Add-on Services (Boost Your Visibility)
                 </div>
-                <h2 className="text-3xl font-bold mb-4">Be everywhere your customers search.</h2>
+                <h2 className="text-3xl font-bold mb-4">
+                  Be everywhere your customers search.
+                </h2>
                 <ul className="space-y-4 mb-6">
                   <li className="flex items-start gap-3">
                     <div className="bg-primary/10 p-2 rounded-full mt-1">
@@ -313,7 +369,8 @@ export default function ServicesPage() {
                     </div>
                     <div>
                       <p className="font-medium">
-                        <span className="font-bold">Articles</span> (written or uploaded): up to 5 per month
+                        <span className="font-bold">Articles</span> (written or
+                        uploaded): up to 5 per month
                       </p>
                     </div>
                   </li>
@@ -323,8 +380,8 @@ export default function ServicesPage() {
                     </div>
                     <div>
                       <p className="font-medium">
-                        <span className="font-bold">Banner Ads</span> – placed on homepage, search results, or company
-                        profiles
+                        <span className="font-bold">Banner Ads</span> – placed
+                        on homepage, search results, or company profiles
                       </p>
                     </div>
                   </li>
@@ -334,7 +391,8 @@ export default function ServicesPage() {
                     </div>
                     <div>
                       <p className="font-medium">
-                        <span className="font-bold">User Also Look</span> – appear on other relevant company pages
+                        <span className="font-bold">User Also Look</span> –
+                        appear on other relevant company pages
                       </p>
                     </div>
                   </li>
@@ -344,7 +402,8 @@ export default function ServicesPage() {
                     </div>
                     <div>
                       <p className="font-medium">
-                        <span className="font-bold">Most Search</span> – appear in high-volume keyword results
+                        <span className="font-bold">Most Search</span> – appear
+                        in high-volume keyword results
                       </p>
                     </div>
                   </li>
@@ -362,7 +421,12 @@ export default function ServicesPage() {
                 </div>
               </div>
               <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
-                <Image src="/visibility-boost.png" alt="Add-on Services" fill className="object-cover" />
+                <Image
+                  src="/images/Service/05.png"
+                  alt="Add-on Services"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
 
@@ -373,7 +437,9 @@ export default function ServicesPage() {
                   <Handshake className="h-4 w-4" />
                   Events & Sponsorship Opportunities
                 </div>
-                <h2 className="text-3xl font-bold mb-4">Go beyond online. Be seen where it matters.</h2>
+                <h2 className="text-3xl font-bold mb-4">
+                  Go beyond online. Be seen where it matters.
+                </h2>
                 <ul className="space-y-4 mb-6">
                   <li className="flex items-start gap-3">
                     <div className="bg-primary/10 p-2 rounded-full mt-1">
@@ -381,8 +447,10 @@ export default function ServicesPage() {
                     </div>
                     <div>
                       <p className="font-medium">
-                        Showcase at <span className="font-bold">TrustFinance Business</span>,{" "}
-                        <span className="font-bold">Connext</span>, and <span className="font-bold">XPO</span>
+                        Showcase at{" "}
+                        <span className="font-bold">TrustFinance Business</span>
+                        , <span className="font-bold">Connext</span>, and{" "}
+                        <span className="font-bold">XPO</span>
                       </p>
                     </div>
                   </li>
@@ -393,7 +461,9 @@ export default function ServicesPage() {
                     <div>
                       <p className="font-medium">
                         Sponsor packages include{" "}
-                        <span className="font-bold">booth, keynote slot, VIP dinner, media coverage</span>
+                        <span className="font-bold">
+                          booth, keynote slot, VIP dinner, media coverage
+                        </span>
                       </p>
                     </div>
                   </li>
@@ -402,7 +472,9 @@ export default function ServicesPage() {
                       <Check className="h-4 w-4 text-primary" />
                     </div>
                     <div>
-                      <p className="font-medium">Gain visibility among traders, IBs, fintechs, and media</p>
+                      <p className="font-medium">
+                        Gain visibility among traders, IBs, fintechs, and media
+                      </p>
                     </div>
                   </li>
                 </ul>
@@ -419,7 +491,12 @@ export default function ServicesPage() {
                 </div>
               </div>
               <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl md:order-1">
-                <Image src="/events-sponsorship.png" alt="Events & Sponsorship" fill className="object-cover" />
+                <Image
+                  src="/images/Service/06.png"
+                  alt="Events & Sponsorship"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -427,7 +504,9 @@ export default function ServicesPage() {
 
         {/* Mid-page CTA */}
         <div className="my-16 bg-muted p-8 rounded-lg text-center">
-          <h2 className="text-2xl font-bold mb-4">Ready to elevate your business with TrustFinance?</h2>
+          <h2 className="text-2xl font-bold mb-4">
+            Ready to elevate your business with TrustFinance?
+          </h2>
           <p className="mb-6">Start today and enjoy numerous benefits</p>
           <PageCTA page="services" className="justify-center" />
         </div>
@@ -440,7 +519,9 @@ export default function ServicesPage() {
                 <Zap className="h-4 w-4 mr-1" />
                 Integration Ready
               </Badge>
-              <h2 className="text-3xl font-bold mb-4">Seamless integrations for automation</h2>
+              <h2 className="text-3xl font-bold mb-4">
+                Seamless integrations for automation
+              </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Connect TrustFinance with your existing tools and workflows
               </p>
@@ -448,11 +529,26 @@ export default function ServicesPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-4xl mx-auto">
               {[
-                { name: "WordPress Plugin", icon: <Globe className="h-8 w-8 mb-2 text-primary" /> },
-                { name: "Zapier (no-code)", icon: <Zap className="h-8 w-8 mb-2 text-primary" /> },
-                { name: "JavaScript Embed", icon: <FileText className="h-8 w-8 mb-2 text-primary" /> },
-                { name: "API Access", icon: <Link2 className="h-8 w-8 mb-2 text-primary" /> },
-                { name: "Webhook + CRM sync", icon: <Users className="h-8 w-8 mb-2 text-primary" /> },
+                {
+                  name: "WordPress Plugin",
+                  icon: <Globe className="h-8 w-8 mb-2 text-primary" />,
+                },
+                {
+                  name: "Zapier (no-code)",
+                  icon: <Zap className="h-8 w-8 mb-2 text-primary" />,
+                },
+                {
+                  name: "JavaScript Embed",
+                  icon: <FileText className="h-8 w-8 mb-2 text-primary" />,
+                },
+                {
+                  name: "API Access",
+                  icon: <Link2 className="h-8 w-8 mb-2 text-primary" />,
+                },
+                {
+                  name: "Webhook + CRM sync",
+                  icon: <Users className="h-8 w-8 mb-2 text-primary" />,
+                },
               ].map((integration, index) => (
                 <Card
                   key={index}
@@ -474,7 +570,9 @@ export default function ServicesPage() {
 
         {/* Bottom CTA */}
         <div className="mt-16 mb-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Start using TrustFinance today</h2>
+          <h2 className="text-3xl font-bold mb-6">
+            Start using TrustFinance today
+          </h2>
           <PageCTA page="services" className="justify-center" />
         </div>
 
@@ -484,5 +582,5 @@ export default function ServicesPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

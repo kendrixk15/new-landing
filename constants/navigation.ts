@@ -1,15 +1,15 @@
 // Navigation links for header, footer, and page CTAs
 
 export type NavItem = {
-  title: string
-  href: string
-  description?: string
-}
+  title: string;
+  href: string;
+  description?: string;
+};
 
 export type NavSection = {
-  title: string
-  items: NavItem[]
-}
+  title: string;
+  items: NavItem[];
+};
 
 // Main navigation items for header
 export const mainNavItems: NavItem[] = [
@@ -25,19 +25,19 @@ export const mainNavItems: NavItem[] = [
     title: "Pricing",
     href: "/pricing",
   },
-  {
-    title: "Use Cases",
-    href: "/use-cases",
-  },
-  {
-    title: "Our Clients",
-    href: "/clients",
-  },
-  {
-    title: "Events",
-    href: "/events",
-  },
-]
+  // {
+  //   title: "Use Cases",
+  //   href: "/use-cases",
+  // },
+  // {
+  //   title: "Our Clients",
+  //   href: "/clients",
+  // },
+  // {
+  //   title: "Events",
+  //   href: "/events",
+  // },
+];
 
 // Footer navigation sections
 export const footerNavSections: NavSection[] = [
@@ -116,22 +116,22 @@ export const footerNavSections: NavSection[] = [
       },
     ],
   },
-]
+];
 
 // CTA definitions for each page
 export type CTAItem = {
-  text: string
-  href: string
-  variant: "default" | "outline" | "secondary" | "ghost" | "link"
-  size?: "default" | "sm" | "lg" | "icon"
-  className?: string
-}
+  text: string;
+  href: string;
+  variant: "default" | "outline" | "secondary" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
+  className?: string;
+};
 
 export type PageCTAs = {
-  primary: CTAItem
-  secondary?: CTAItem
-  tertiary?: CTAItem
-}
+  primary: CTAItem;
+  secondary?: CTAItem;
+  tertiary?: CTAItem;
+};
 
 export const pageCTAs: Record<string, PageCTAs> = {
   home: {
@@ -297,14 +297,14 @@ export const pageCTAs: Record<string, PageCTAs> = {
       variant: "link",
     },
   },
-}
+};
 
 // Related pages for each page
 export type RelatedPage = {
-  title: string
-  href: string
-  description: string
-}
+  title: string;
+  href: string;
+  description: string;
+};
 
 export const relatedPages: Record<string, RelatedPage[]> = {
   home: [
@@ -359,7 +359,7 @@ export const relatedPages: Record<string, RelatedPage[]> = {
     },
   ],
   // Add more pages as needed
-}
+};
 
 const pathMap: Record<string, string> = {
   why: "Why TrustFinance",
@@ -370,4 +370,4 @@ const pathMap: Record<string, string> = {
   claim: "Claim Your Profile",
   contact: "Contact Sales",
   events: "Events",
-}
+};
