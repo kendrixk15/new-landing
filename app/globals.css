@@ -1,0 +1,304 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 225 100% 62.5%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 225 100% 62.5%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 225 100% 62.5%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 225 100% 62.5%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-tight;
+  }
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+/* Enhanced dark mode styles */
+.dark {
+  color-scheme: dark;
+}
+
+.dark .bg-grid-slate-200\/50 {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(51 65 85 / 0.4)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+}
+
+.dark .bg-grid-slate-700\/25 {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(51 65 85 / 0.4)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+}
+
+/* Improve text contrast in dark mode */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: hsl(210 40% 98%);
+}
+
+.dark p {
+  color: hsl(215 20.2% 75%);
+}
+
+/* Enhanced card contrast */
+.dark .bg-card {
+  background-color: hsl(217.2 32.6% 12%);
+  border-color: hsl(217.2 32.6% 20%);
+}
+
+/* Better muted backgrounds */
+.dark .bg-muted {
+  background-color: hsl(217.2 32.6% 15%);
+}
+
+/* Improved button contrast */
+.dark .bg-secondary {
+  background-color: hsl(217.2 32.6% 20%);
+}
+
+.dark .bg-secondary:hover {
+  background-color: hsl(217.2 32.6% 25%);
+}
+
+/* Enhanced border visibility */
+.dark .border {
+  border-color: hsl(217.2 32.6% 20%);
+}
+
+/* Better input contrast */
+.dark .bg-input {
+  background-color: hsl(217.2 32.6% 15%);
+  border-color: hsl(217.2 32.6% 25%);
+}
+
+.dark .bg-input:focus {
+  border-color: hsl(225 100% 62.5%);
+}
+
+/* Improved code block readability */
+.dark pre {
+  background-color: hsl(217.2 32.6% 10%) !important;
+  border: 1px solid hsl(217.2 32.6% 20%);
+}
+
+.dark code {
+  background-color: hsl(217.2 32.6% 15%);
+  color: hsl(210 40% 90%);
+}
+
+/* Better table contrast */
+.dark table {
+  border-color: hsl(217.2 32.6% 20%);
+}
+
+.dark th,
+.dark td {
+  border-color: hsl(217.2 32.6% 20%);
+}
+
+.dark .bg-gray-50 {
+  background-color: hsl(217.2 32.6% 15%);
+}
+
+.dark .bg-gray-100 {
+  background-color: hsl(217.2 32.6% 18%);
+}
+
+.dark .bg-gray-800 {
+  background-color: hsl(217.2 32.6% 12%);
+}
+
+.dark .bg-gray-850 {
+  background-color: hsl(217.2 32.6% 10%);
+}
+
+.dark .bg-gray-900 {
+  background-color: hsl(217.2 32.6% 8%);
+}
+
+.dark .bg-gray-950 {
+  background-color: hsl(217.2 32.6% 6%);
+}
+
+/* Enhanced text colors for better readability */
+.dark .text-gray-300 {
+  color: hsl(215 20.2% 75%);
+}
+
+.dark .text-gray-400 {
+  color: hsl(215 20.2% 65%);
+}
+
+.dark .text-gray-500 {
+  color: hsl(215 20.2% 55%);
+}
+
+.dark .text-gray-600 {
+  color: hsl(215 20.2% 45%);
+}
+
+.dark .text-gray-700 {
+  color: hsl(215 20.2% 75%);
+}
+
+/* Better blue backgrounds in dark mode */
+.dark .bg-blue-50 {
+  background-color: hsl(225 100% 8%);
+}
+
+.dark .bg-blue-100 {
+  background-color: hsl(225 100% 12%);
+}
+
+.dark .bg-blue-900\/20 {
+  background-color: hsl(225 100% 8% / 0.6);
+}
+
+.dark .bg-blue-900\/30 {
+  background-color: hsl(225 100% 8% / 0.8);
+}
+
+.dark .bg-blue-950\/20 {
+  background-color: hsl(225 100% 6% / 0.6);
+}
+
+/* Enhanced green colors */
+.dark .bg-green-100 {
+  background-color: hsl(142 76% 8%);
+}
+
+.dark .bg-green-900\/30 {
+  background-color: hsl(142 76% 8% / 0.8);
+}
+
+.dark .text-green-100 {
+  color: hsl(142 76% 85%);
+}
+
+/* Enhanced other color backgrounds */
+.dark .bg-orange-50 {
+  background-color: hsl(24 100% 8%);
+}
+
+.dark .bg-orange-900\/30 {
+  background-color: hsl(24 100% 8% / 0.8);
+}
+
+.dark .bg-purple-100 {
+  background-color: hsl(270 100% 8%);
+}
+
+.dark .bg-purple-900\/30 {
+  background-color: hsl(270 100% 8% / 0.8);
+}
+
+.dark .bg-amber-100 {
+  background-color: hsl(45 100% 8%);
+}
+
+.dark .bg-amber-900\/30 {
+  background-color: hsl(45 100% 8% / 0.8);
+}
+
+.dark .bg-rose-100 {
+  background-color: hsl(350 100% 8%);
+}
+
+.dark .bg-rose-900\/30 {
+  background-color: hsl(350 100% 8% / 0.8);
+}
+
+.dark .bg-indigo-100 {
+  background-color: hsl(225 100% 8%);
+}
+
+.dark .bg-indigo-900\/30 {
+  background-color: hsl(225 100% 8% / 0.8);
+}
+
+/* Better shadow in dark mode */
+.dark .shadow-sm {
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+}
+
+.dark .shadow-md {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+}
+
+.dark .shadow-lg {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+}
+
+.dark .shadow-xl {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.3);
+}
+
+/* Improve button text readability */
+.btn,
+button {
+  @apply font-medium;
+}
+
+.bg-grid-slate-200\/50 {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(226 232 240 / 0.5)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+}
+
+.dark .bg-grid-slate-700\/25 {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(51 65 85 / 0.25)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+}
