@@ -12,13 +12,19 @@ import {
   LineChart,
   Code,
   ArrowRight,
-} from "lucide-react"
+} from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 export default function PricingPage() {
   return (
@@ -31,11 +37,15 @@ export default function PricingPage() {
           <div className="absolute inset-0 bg-grid-slate-200/50 [mask-image:linear-gradient(0deg,white,transparent)] dark:bg-grid-slate-700/25"></div>
           <div className="container relative">
             <div className="text-center mb-8">
-              <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20 border-none">Pricing</Badge>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Choose the right plan to grow with trust.</h1>
+              <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20 border-none">
+                Pricing
+              </Badge>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                Choose the right plan to grow with trust.
+              </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                From startups to industry leaders — scale your reputation with flexible packages and high-impact
-                features.
+                From startups to industry leaders — scale your reputation with
+                flexible packages and high-impact features.
               </p>
             </div>
           </div>
@@ -47,7 +57,8 @@ export default function PricingPage() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Annual Plans</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Choose the plan that fits your business needs and scale as you grow.
+                Choose the plan that fits your business needs and scale as you
+                grow.
               </p>
             </div>
 
@@ -57,16 +68,22 @@ export default function PricingPage() {
                 <CardHeader>
                   <CardTitle>Basic</CardTitle>
                   <div className="mt-4 text-4xl font-bold">
-                    $5,988<span className="text-lg font-normal text-muted-foreground">/year</span>
+                    $5,988
+                    <span className="text-lg font-normal text-muted-foreground">
+                      /year
+                    </span>
                   </div>
-                  <p className="text-muted-foreground mt-2">Perfect for startups and small businesses</p>
+                  <p className="text-muted-foreground mt-2">
+                    Perfect for startups and small businesses
+                  </p>
                 </CardHeader>
                 <CardContent className="pt-0">
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
                       <span>
-                        <span className="font-medium">1,000</span> Review Invitations
+                        <span className="font-medium">1,000</span> Review
+                        Invitations
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
@@ -80,7 +97,8 @@ export default function PricingPage() {
                     <li className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
                       <span>
-                        <span className="font-medium">3</span> Custom Email Templates
+                        <span className="font-medium">3</span> Custom Email
+                        Templates
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
@@ -95,12 +113,15 @@ export default function PricingPage() {
                     </li>
                     <li className="flex items-start gap-2">
                       <X className="h-5 w-5 text-red-500 shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Ad-Free Profile</span>
+                      <span className="text-muted-foreground">
+                        Ad-Free Profile
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
                       <span>
-                        <span className="font-medium">Basic</span> Analytics Dashboard
+                        <span className="font-medium">Basic</span> Analytics
+                        Dashboard
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
@@ -124,16 +145,22 @@ export default function PricingPage() {
                 <CardHeader>
                   <CardTitle>Advance</CardTitle>
                   <div className="mt-4 text-4xl font-bold">
-                    $11,988<span className="text-lg font-normal text-muted-foreground">/year</span>
+                    $11,988
+                    <span className="text-lg font-normal text-muted-foreground">
+                      /year
+                    </span>
                   </div>
-                  <p className="text-muted-foreground mt-2">Ideal for growing financial companies</p>
+                  <p className="text-muted-foreground mt-2">
+                    Ideal for growing financial companies
+                  </p>
                 </CardHeader>
                 <CardContent className="pt-0">
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
                       <span>
-                        <span className="font-medium">5,000</span> Review Invitations
+                        <span className="font-medium">5,000</span> Review
+                        Invitations
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
@@ -147,7 +174,8 @@ export default function PricingPage() {
                     <li className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
                       <span>
-                        <span className="font-medium">6</span> Custom Email Templates
+                        <span className="font-medium">6</span> Custom Email
+                        Templates
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
@@ -167,13 +195,15 @@ export default function PricingPage() {
                     <li className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
                       <span>
-                        <span className="font-medium">Enhanced</span> Analytics Dashboard
+                        <span className="font-medium">Enhanced</span> Analytics
+                        Dashboard
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
                       <span>
-                        <span className="font-medium">Priority Email</span> Support
+                        <span className="font-medium">Priority Email</span>{" "}
+                        Support
                       </span>
                     </li>
                   </ul>
@@ -188,16 +218,22 @@ export default function PricingPage() {
                 <CardHeader>
                   <CardTitle>Pro</CardTitle>
                   <div className="mt-4 text-4xl font-bold">
-                    $16,788<span className="text-lg font-normal text-muted-foreground">/year</span>
+                    $16,788
+                    <span className="text-lg font-normal text-muted-foreground">
+                      /year
+                    </span>
                   </div>
-                  <p className="text-muted-foreground mt-2">For established financial institutions</p>
+                  <p className="text-muted-foreground mt-2">
+                    For established financial institutions
+                  </p>
                 </CardHeader>
                 <CardContent className="pt-0">
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
                       <span>
-                        <span className="font-medium">Unlimited</span> Review Invitations
+                        <span className="font-medium">Unlimited</span> Review
+                        Invitations
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
@@ -211,7 +247,8 @@ export default function PricingPage() {
                     <li className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
                       <span>
-                        <span className="font-medium">10</span> Custom Email Templates
+                        <span className="font-medium">10</span> Custom Email
+                        Templates
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
@@ -231,13 +268,15 @@ export default function PricingPage() {
                     <li className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
                       <span>
-                        <span className="font-medium">Full Insights</span> Analytics Dashboard
+                        <span className="font-medium">Full Insights</span>{" "}
+                        Analytics Dashboard
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
                       <span>
-                        <span className="font-medium">Dedicated CSM</span> Support
+                        <span className="font-medium">Dedicated CSM</span>{" "}
+                        Support
                       </span>
                     </li>
                   </ul>
@@ -249,7 +288,10 @@ export default function PricingPage() {
             </div>
 
             <div className="text-center mt-6 text-sm text-muted-foreground">
-              <p>All plans are billed annually. Discounts available during promotional campaigns.</p>
+              <p>
+                All plans are billed annually. Discounts available during
+                promotional campaigns.
+              </p>
             </div>
           </div>
         </section>
@@ -260,7 +302,8 @@ export default function PricingPage() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Add-On Services</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Enhance your plan with these optional add-ons to boost your visibility and impact.
+                Enhance your plan with these optional add-ons to boost your
+                visibility and impact.
               </p>
             </div>
 
@@ -273,7 +316,9 @@ export default function PricingPage() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground mb-4">Up to 5 TrustFinance-published articles/month</p>
+                  <p className="text-muted-foreground mb-4">
+                    Up to 5 TrustFinance-published articles/month
+                  </p>
                   <div className="text-2xl font-bold">
                     $700<span className="text-sm font-normal">/month</span>
                   </div>
@@ -293,7 +338,9 @@ export default function PricingPage() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground mb-4">Top visibility on homepage/search/profile</p>
+                  <p className="text-muted-foreground mb-4">
+                    Top visibility on homepage/search/profile
+                  </p>
                   <div className="text-2xl font-bold">
                     $700<span className="text-sm font-normal">/month</span>
                   </div>
@@ -313,7 +360,9 @@ export default function PricingPage() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground mb-4">Show your company as related on others' profiles</p>
+                  <p className="text-muted-foreground mb-4">
+                    Show your company as related on others' profiles
+                  </p>
                   <div className="text-2xl font-bold">
                     $1,200<span className="text-sm font-normal">/month</span>
                   </div>
@@ -333,7 +382,9 @@ export default function PricingPage() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground mb-4">Appear on trending keywords & search result boost</p>
+                  <p className="text-muted-foreground mb-4">
+                    Appear on trending keywords & search result boost
+                  </p>
                   <div className="text-2xl font-bold">
                     $1,200<span className="text-sm font-normal">/month</span>
                   </div>
@@ -358,7 +409,8 @@ export default function PricingPage() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">All Plans Include</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Core features available across all our plans to help you build and manage your reputation.
+                Core features available across all our plans to help you build
+                and manage your reputation.
               </p>
             </div>
 
@@ -367,40 +419,60 @@ export default function PricingPage() {
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <Check className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-lg font-bold mb-2">Verified Business Listing</h3>
-                <p className="text-muted-foreground">Establish credibility with a verified business profile</p>
+                <h3 className="text-lg font-bold mb-2">
+                  Verified Business Listing
+                </h3>
+                <p className="text-muted-foreground">
+                  Establish credibility with a verified business profile
+                </p>
               </div>
 
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <Star className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-lg font-bold mb-2">TrustScore System & Widgets</h3>
-                <p className="text-muted-foreground">Display your reputation score across your digital presence</p>
+                <h3 className="text-lg font-bold mb-2">
+                  TrustScore System & Widgets
+                </h3>
+                <p className="text-muted-foreground">
+                  Display your reputation score across your digital presence
+                </p>
               </div>
 
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <BarChart className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-lg font-bold mb-2">Reputation Management Dashboard</h3>
-                <p className="text-muted-foreground">Monitor and manage your online reputation in one place</p>
+                <h3 className="text-lg font-bold mb-2">
+                  Reputation Management Dashboard
+                </h3>
+                <p className="text-muted-foreground">
+                  Monitor and manage your online reputation in one place
+                </p>
               </div>
 
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <Mail className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-lg font-bold mb-2">Review Invite and Response Tools</h3>
-                <p className="text-muted-foreground">Collect and respond to reviews efficiently</p>
+                <h3 className="text-lg font-bold mb-2">
+                  Review Invite and Response Tools
+                </h3>
+                <p className="text-muted-foreground">
+                  Collect and respond to reviews efficiently
+                </p>
               </div>
 
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <LineChart className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-lg font-bold mb-2">Profile Analytics and Conversion Tracking</h3>
-                <p className="text-muted-foreground">Measure the impact of your reputation on business results</p>
+                <h3 className="text-lg font-bold mb-2">
+                  Profile Analytics and Conversion Tracking
+                </h3>
+                <p className="text-muted-foreground">
+                  Measure the impact of your reputation on business results
+                </p>
               </div>
 
               <div className="flex flex-col items-center text-center">
@@ -408,7 +480,9 @@ export default function PricingPage() {
                   <Code className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-lg font-bold mb-2">Integration Options</h3>
-                <p className="text-muted-foreground">Connect with your tools via Zapier, JavaScript, and API</p>
+                <p className="text-muted-foreground">
+                  Connect with your tools via Zapier, JavaScript, and API
+                </p>
               </div>
             </div>
           </div>
@@ -420,7 +494,9 @@ export default function PricingPage() {
             <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg border border-primary/20">
               <div className="flex items-center justify-center gap-3 mb-6">
                 <span className="text-2xl">🎉</span>
-                <h2 className="text-2xl font-bold">Mid-Year Mega Deal (until Aug 7)</h2>
+                <h2 className="text-2xl font-bold">
+                  Mid-Year Mega Deal (until Aug 7)
+                </h2>
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">
@@ -436,15 +512,23 @@ export default function PricingPage() {
                       <tbody>
                         <tr className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
                           <td className="p-3">Buy 1 package</td>
-                          <td className="p-3 text-center font-bold text-green-600">20% OFF</td>
+                          <td className="p-3 text-center font-bold text-green-600">
+                            20% OFF
+                          </td>
                         </tr>
                         <tr className="bg-gray-50 dark:bg-gray-850 border-b border-gray-200 dark:border-gray-700">
                           <td className="p-3">Buy 2+ packages</td>
-                          <td className="p-3 text-center font-bold text-green-600">30% OFF</td>
+                          <td className="p-3 text-center font-bold text-green-600">
+                            30% OFF
+                          </td>
                         </tr>
                         <tr className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-                          <td className="p-3">Buy full bundle (Plan + Add-ons)</td>
-                          <td className="p-3 text-center font-bold text-green-600">40% OFF</td>
+                          <td className="p-3">
+                            Buy full bundle (Plan + Add-ons)
+                          </td>
+                          <td className="p-3 text-center font-bold text-green-600">
+                            40% OFF
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -455,7 +539,11 @@ export default function PricingPage() {
                   <h3 className="font-bold mb-2">Example:</h3>
                   <p className="mb-4">
                     Advance Plan ($11,988) + Add-ons ($8,400)
-                    <br />➡ You pay only <span className="font-bold text-green-600">$12,228</span> instead of $20,388!
+                    <br />➡ You pay only{" "}
+                    <span className="font-bold text-green-600">
+                      $12,228
+                    </span>{" "}
+                    instead of $20,388!
                   </p>
                   <Button className="w-full">Get Full Offer Details</Button>
                 </div>
@@ -477,7 +565,9 @@ export default function PricingPage() {
               <div className="bg-gradient-to-r from-primary/90 to-blue-600/90 text-white p-8 rounded-xl mb-8">
                 <div className="flex items-center justify-center gap-2 mb-4 text-xl">
                   <span className="text-2xl">🎟️</span>
-                  <h3 className="text-xl font-bold">Purchase Advance or Pro → Get</h3>
+                  <h3 className="text-xl font-bold">
+                    Purchase Advance or Pro → Get
+                  </h3>
                 </div>
                 <ul className="space-y-4 max-w-md mx-auto text-left mb-6">
                   <li className="flex items-start gap-3">
@@ -485,7 +575,8 @@ export default function PricingPage() {
                       <Check className="h-4 w-4 text-white" />
                     </div>
                     <span>
-                      <span className="font-bold">3x VIP Tickets</span> to TrustFinance Business
+                      <span className="font-bold">3x VIP Tickets</span> to
+                      TrustFinance Business
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
@@ -493,7 +584,8 @@ export default function PricingPage() {
                       <Check className="h-4 w-4 text-white" />
                     </div>
                     <span>
-                      <span className="font-bold">40% off</span> TrustFinance XPO Sponsorship (Nov 2025)
+                      <span className="font-bold">40% off</span> TrustFinance
+                      XPO Sponsorship (Nov 2025)
                     </span>
                   </li>
                 </ul>
@@ -509,8 +601,12 @@ export default function PricingPage() {
         <section className="py-20 bg-gradient-to-r from-primary/90 to-blue-600/90 text-white">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to build your reputation and grow?</h2>
-              <p className="text-xl mb-8">Choose your plan or talk to our advisor for a tailored solution.</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to build your reputation and grow?
+              </h2>
+              <p className="text-xl mb-8">
+                Choose your plan or talk to our advisor for a tailored solution.
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" variant="secondary" className="gap-2">
                   🎯 Choose a Plan
@@ -537,5 +633,5 @@ export default function PricingPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

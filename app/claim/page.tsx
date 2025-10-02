@@ -427,7 +427,7 @@ export default function ClaimProfilePage() {
               <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <Label htmlFor="companyName">Company Name</Label>
+                    <Label htmlFor="companyName">Company Name <span className="text-destructive">*</span></Label>
                     <Input
                       id="companyName"
                       name="companyName"
@@ -441,7 +441,7 @@ export default function ClaimProfilePage() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="website">Official Website</Label>
+                    <Label htmlFor="website">Official Website <span className="text-destructive">*</span></Label>
                     <Input
                       id="website"
                       name="website"
@@ -457,7 +457,7 @@ export default function ClaimProfilePage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <Label htmlFor="fullName">Your Full Name</Label>
+                    <Label htmlFor="fullName">Your Full Name <span className="text-destructive">*</span></Label>
                     <Input
                       id="fullName"
                       name="fullName"
@@ -471,7 +471,7 @@ export default function ClaimProfilePage() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="position">Position</Label>
+                    <Label htmlFor="position">Position <span className="text-destructive">*</span></Label>
                     <Select value={formData.position} onValueChange={handleSelectChange}>
                       <SelectTrigger
                         ref={positionRef}
@@ -494,7 +494,7 @@ export default function ClaimProfilePage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <Label htmlFor="email">Work Email</Label>
+                    <Label htmlFor="email">Work Email <span className="text-destructive">*</span></Label>
                     <Input
                       id="email"
                       name="email"
@@ -546,7 +546,7 @@ export default function ClaimProfilePage() {
                       className={formErrors.authorized ? "border-destructive" : ""}
                     />
                     <Label htmlFor="authorized" className="text-sm font-normal">
-                      I confirm that I am authorized to represent this company.
+                      I confirm that I am authorized to represent this company. <span className="text-destructive">*</span>
                     </Label>
                   </div>
                   {formErrors.authorized && <p className="text-sm text-destructive">{formErrors.authorized}</p>}
