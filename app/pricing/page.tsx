@@ -1,3 +1,5 @@
+"use client"
+
 import {
   Check,
   X,
@@ -25,6 +27,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import Link from "next/link";
 
 export default function PricingPage() {
   return (
@@ -52,7 +55,7 @@ export default function PricingPage() {
         </section>
 
         {/* Pricing Table */}
-        <section className="py-20 bg-white dark:bg-gray-950">
+        <section id="annual-plans" className="py-20 bg-white dark:bg-gray-950">
           <div className="container">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Annual Plans</h2>
@@ -133,7 +136,9 @@ export default function PricingPage() {
                   </ul>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full">Choose Basic</Button>
+                  <Button className="w-full" asChild>
+                    <Link href="/contact">Choose Basic</Link>
+                  </Button>
                 </CardFooter>
               </Card>
 
@@ -209,7 +214,9 @@ export default function PricingPage() {
                   </ul>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full">Choose Advance</Button>
+                  <Button className="w-full" asChild>
+                    <Link href="/contact">Choose Advance</Link>
+                  </Button>
                 </CardFooter>
               </Card>
 
@@ -282,7 +289,9 @@ export default function PricingPage() {
                   </ul>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full">Choose Pro</Button>
+                  <Button className="w-full" asChild>
+                    <Link href="/contact">Choose Pro</Link>
+                  </Button>
                 </CardFooter>
               </Card>
             </div>
@@ -553,7 +562,7 @@ export default function PricingPage() {
         </section>
 
         {/* VIP Event Bonus */}
-        <section className="py-20 bg-white dark:bg-gray-950">
+        {/* <section className="py-20 bg-white dark:bg-gray-950">
           <div className="container">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -595,7 +604,7 @@ export default function PricingPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* CTA */}
         <section className="py-20 bg-gradient-to-r from-primary/90 to-blue-600/90 text-white">
@@ -608,23 +617,32 @@ export default function PricingPage() {
                 Choose your plan or talk to our advisor for a tailored solution.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="gap-2">
-                  🎯 Choose a Plan
+                <Button 
+                  size="lg" 
+                  variant="secondary" 
+                  className="gap-2"
+                  onClick={() => {
+                    const element = document.getElementById("annual-plans")
+                    element?.scrollIntoView({ behavior: "smooth" })
+                  }}
+                >
+                  Choose a Plan
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
                   className="bg-transparent text-white border-white hover:bg-white/10 gap-2"
+                  asChild
                 >
-                  📬 Contact Sales
+                  <Link href="/contact">Contact Sales</Link>
                 </Button>
-                <Button
+                {/* <Button
                   size="lg"
                   variant="outline"
                   className="bg-transparent text-white border-white hover:bg-white/10 gap-2"
                 >
                   📄 Download Full Pricing Sheet
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>
