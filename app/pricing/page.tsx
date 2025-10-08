@@ -554,7 +554,9 @@ export default function PricingPage() {
                     </span>{" "}
                     instead of $20,388!
                   </p>
-                  <Button className="w-full">Get Full Offer Details</Button>
+                  <Button className="w-full" asChild>
+                    <Link href="/contact">Get Full Offer Details</Link>
+                  </Button>
                 </div>
               </div>
             </div>
