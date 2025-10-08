@@ -1,0 +1,130 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  DEPLOYMENT_NAME: $AWS_DOCKER_REGISTRY_NAME
+  DOCKER_REGISTRY: $AWS_DOCKER_REGISTRY/$DEPLOYMENT_NAME
+
+build-dev:
+  stage: build
+  image: docker:19.03.1
+  services:
+    - docker:19.03.1-dind
+  before_script:
+    - docker info
+    - apk update -qy && apk add --no-cache curl unzip bash
+    - apk add --no-cache python3 && python3 -m ensurepip &&  rm -r /usr/lib/python*/ensurepip && pip3 install --upgrade pip setuptools && if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi && if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi && rm -r /root/.cache
+    - pip3 install awscli
+  script:
+    - cat $ENV_DEVELOPMENT > .env
+    - $(aws ecr get-login --no-include-email --region $AWS_REGION)
+    - docker build -t $DOCKER_REGISTRY:dev .
+    - docker push $DOCKER_REGISTRY:dev
+  only:
+    - develop
+  tags:
+    - trustfinance-runner-2
+
+
+.kubectl_config-dev: &kubectl_config-dev
+  - aws eks --region $AWS_REGION update-kubeconfig --name $AWS_CLUSTER_NAME
+
+.deploy-dev:
+  image: docker.io/sulemanhasib43/eks:latest
+  stage: deploy
+  variables:
+    K8S_NAMESPACE: $AWS_KUBE_NAMESPACE
+  before_script: *kubectl_config-dev
+  script:
+    - kubectl version
+    - kubectl -n $K8S_NAMESPACE patch deployment $DEPLOYMENT_NAME-dev -p '{"spec":{"template":{"spec":{"containers":[{"name":"'"$DEPLOYMENT_NAME-dev"'","image":"'"$DOCKER_REGISTRY:dev"'"}]}}}}'
+    - kubectl -n $K8S_NAMESPACE rollout restart deploy $DEPLOYMENT_NAME-dev
+  only:
+    - develop
+  tags:
+    - trustfinance-runner-2
+    
+build-staging:
+  stage: build
+  image: docker:19.03.1
+  services:
+    - docker:19.03.1-dind
+  before_script:
+    - docker info
+    - apk update -qy && apk add --no-cache curl unzip bash
+    - apk add --no-cache python3 && python3 -m ensurepip &&  rm -r /usr/lib/python*/ensurepip && pip3 install --upgrade pip setuptools && if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi && if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi && rm -r /root/.cache
+    - pip3 install awscli
+  script:
+    - cat $ENV_STAGING > .env
+    - $(aws ecr get-login --no-include-email --region $AWS_REGION)
+    - docker build -t $DOCKER_REGISTRY:staging .
+    - docker push $DOCKER_REGISTRY:staging
+  only:
+    - staging
+  tags:
+    - trustfinance-runner-2
+
+
+.kubectl_config-staging: &kubectl_config-staging
+  - aws eks --region $AWS_REGION update-kubeconfig --name $AWS_CLUSTER_NAME
+
+.deploy-staging:
+  image: docker.io/sulemanhasib43/eks:latest
+  stage: deploy
+  variables:
+    K8S_NAMESPACE: $AWS_KUBE_NAMESPACE
+  before_script: *kubectl_config-staging
+  script:
+    - kubectl version
+    - kubectl -n $K8S_NAMESPACE patch deployment $DEPLOYMENT_NAME-staging -p '{"spec":{"template":{"spec":{"containers":[{"name":"'"$DEPLOYMENT_NAME-staging"'","image":"'"$DOCKER_REGISTRY:staging"'"}]}}}}'
+    - kubectl -n $K8S_NAMESPACE rollout restart deploy $DEPLOYMENT_NAME-staging
+  only:
+    - staging
+  tags:
+    - trustfinance-runner-2
+
+build-production:
+  stage: build
+  image: public.ecr.aws/docker/library/docker:20.10
+  services:
+    - name: public.ecr.aws/docker/library/docker:20.10-dind
+      alias: docker
+  before_script:
+    - docker info
+    - apk update -qy && apk add --no-cache curl unzip bash
+    - apk add --no-cache python3 && python3 -m ensurepip &&  rm -r /usr/lib/python*/ensurepip && pip3 install --upgrade pip setuptools && if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi && if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi && rm -r /root/.cache
+    - pip3 install awscli
+  script:
+    - cat $ENV_PRODUCTION > .env
+    - $(aws ecr get-login --no-include-email --region $AWS_REGION)
+    - docker build -t $DOCKER_REGISTRY:latest .
+    - docker push $DOCKER_REGISTRY:latest
+  only:
+    - main
+  tags:
+    - trustfinance-runner-2
+
+
+.kubectl_config-production: &kubectl_config-production
+  - aws eks --region $AWS_REGION update-kubeconfig --name $AWS_CLUSTER_NAME
+
+deploy-production:
+  image: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
+  stage: deploy
+  variables:
+    K8S_NAMESPACE: $AWS_KUBE_NAMESPACE
+  before_script:
+    - curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+    - chmod +x kubectl
+    - mv kubectl /usr/local/bin/kubectl
+    - *kubectl_config-production
+  script:
+    - kubectl config current-context
+    - kubectl version
+    - kubectl -n $K8S_NAMESPACE patch deployment $DEPLOYMENT_NAME -p '{"spec":{"template":{"spec":{"containers":[{"name":"'"$DEPLOYMENT_NAME"'","image":"'"$DOCKER_REGISTRY:latest"'"}]}}}}'
+    - kubectl -n $K8S_NAMESPACE rollout restart deploy $DEPLOYMENT_NAME
+  only:
+    - main
+  tags:
+    - trustfinance-runner-2
